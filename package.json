@@ -1,0 +1,38 @@
+{
+  "name": "danilorisati",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "author": "Danilo Risati <danilo@danilorisati.com.br>",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.9.8",
+    "gulp": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-connect-php": "0.0.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-useref": "^3.1.0"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/Risati/danilorisati"
+  },
+  "keywords": [
+    "Personal",
+    "web",
+    "site",
+    "html5",
+    "css3",
+    "js",
+    "jquery",
+    "sass",
+    "gulp"
+  ],
+  "license": "ISC"
+}
