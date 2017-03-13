@@ -62,7 +62,7 @@ gulp.task('php', function() {
     php.server({ base: './', port: 80, keepalive: true});
 });
 
-gulp.task('server', ['sass'], function() {
+gulp.task('server', function() {
   browserSync.init({
     proxy: 'localhost/danilorisati',
     port: 8080,
@@ -71,12 +71,12 @@ gulp.task('server', ['sass'], function() {
   });
   gulp.watch('./dist/css/*.scss',['sass']);
   //gulp.watch('**/*').on('change', browserSync.reload);
-	gulp.watch('**/*.php').on('change', browserSync.reload);
+
+});
+
+gulp.task('reload-browser',['watch'], function () {
 	gulp.watch('dist/css/*.scss').on('change', browserSync.reload);
 	gulp.watch('dist/css/*.css').on('change', browserSync.reload);
-	gulp.watch('dist/js/*.js').on('change', browserSync.reload);
-
-
 });
 
 
@@ -85,5 +85,6 @@ gulp.task('default',['watch', 'server']);
 gulp.task('watch', function() {
   gulp.watch(js,  ['minify-js']);
   gulp.watch(css, ['minify-css']);
-
+	gulp.watch('**/*.php').on('change', browserSync.reload);
+	gulp.watch('dist/js/*.js').on('change', browserSync.reload);
 });
