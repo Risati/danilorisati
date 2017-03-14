@@ -54,8 +54,7 @@ require( 'wp-blog-header.php'); ?>
 				);
 				query_posts( $args );
 				while ( have_posts() ) : the_post(); ?>
-				<div class="slider posts-teste">
-
+					<a href="<?php the_permalink(); ?>">
 						<article <?php post_class('item') ?>>
 							<?php if (has_post_thumbnail( $post->ID )):
 									$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'image-size');
@@ -67,8 +66,7 @@ require( 'wp-blog-header.php'); ?>
 								<h2 class="title"><?php the_title(); ?></h2>
 							</div>
 						</article>
-
-				</div>
+					</a>
 
 				<?php endwhile; ?>
       </div>
@@ -76,4 +74,4 @@ require( 'wp-blog-header.php'); ?>
   </section>
 </body>
 
-<?php include 'footer.php' ?>
+<?php get_footer(); ?>

@@ -118,16 +118,4 @@ $(function () {
     $('#portfolio').mixItUp();
     modalCloseActive();
 
-		$('.posts-teste').slick({
-				dots: false,
-				infinite: true,
-				autoplay: true,
-				arrows: true,
-				speed: 800,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				variableWidth: false
-		});
-
-
 });

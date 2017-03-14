@@ -37,12 +37,12 @@ register_nav_menus( array(
 function arphabet_widgets_init() {
 
    register_sidebar( array(
-       'name'          => 'Home right sidebar',
-       'id'            => 'home_right_1',
-       'before_widget' => '<div class="widget-area">',
+       'name'          => 'Sidebar single',
+       'id'            => 'single_sidebar',
+       'before_widget' => '<div class="sub-items widget-area">',
        'after_widget'  => '</div>',
-       'before_title'  => '<h2 class="rounded">',
-       'after_title'   => '</h2>',
+       'before_title'  => '<h3 class="title">',
+       'after_title'   => '</h3>',
    ) );
 
 }

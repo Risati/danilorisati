@@ -14,6 +14,7 @@ get_header();
           <h1>Sobre mim</h1>
         </div>
     </div>
+		<div class="overlay"></div>
 </div>
 <section class="features-skills">
     <div class="container">
@@ -82,18 +83,18 @@ get_header();
 <div class="container">
     <div class="row">
         <div class="slider skills">
-            <div class="item"><img src="assets/images/about/html5.png"></div>
-            <div class="item"><img src="assets/images/about/css3.png"></div>
-            <div class="item"><img src="assets/images/about/js.png"></div>
-            <div class="item"><img src="assets/images/about/bootstrap.png"></div>
-            <div class="item"><img src="assets/images/about/sass.png"></div>
-            <div class="item"><img src="assets/images/about/jquery.png"></div>
-            <div class="item"><img src="assets/images/about/git.png"></div>
-            <div class="item"><img src="assets/images/about/gulp.png"></div>
-            <div class="item"><img src="assets/images/about/npm.png"></div>
-            <div class="item"><img src="assets/images/about/php.png"></div>
-            <div class="item"><img src="assets/images/about/mysql.png"></div>
-            <div class="item"><img src="assets/images/about/linux.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/html5.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/css3.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/js.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/bootstrap.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/sass.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/jquery.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/git.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/gulp.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/npm.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/php.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/mysql.png"></div>
+            <div class="item"><img src="<?php bloginfo('template_url'); ?>/assets/images/about/linux.png"></div>
         </div>
     </div>
 </div>

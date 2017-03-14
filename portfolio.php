@@ -13,6 +13,7 @@ get_header();
           <h1>Portfolio</h1>
         </div>
     </div>
+		<div class="overlay"></div>
 </div>
 <section class="portfolio portfolio-page">
   <div class="container">

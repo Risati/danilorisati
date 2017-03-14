@@ -1,56 +1,45 @@
-<?php include 'header.php'; ?>
+<?php
+/**
+ * The template for displaying posts
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
+ *
+ * @package Danilo Risati
+ * @since Danilo Risati 1.0
+ */
+
+get_header(); ?>
+
 </body>
 <body class="single-page">
 <section class="post-title">
-  <h1>Post title</h1>
+  <h1><?php the_title(); ?></h1>
 </section>
 <section class="single-article">
   <div class="container">
     <div class="row">
       <article class="post-meta">
-        <div class="author-date">
-          Por <h1> Danilo Risati</h1> em <h2>Categoria</h2> | <h3>27 de janeiro de 2017</h3>
-        </div>
-        <div class="resume">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <pre>
-            <code class="html">
-&lt;?php
-  the_title();
-  the_title();
-  the_title();
-  the_title();
-?&gt;
-            </code>
-          </pre>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="comments">
-          <textarea></textarea>
-        </div>
+				 <?php while ( have_posts() ) : the_post(); ?>
+					 <div class="author-date">
+	           Por <h1> <?php the_author(); ?></h1> em <h2><?php the_category(); ?></h2> | <h3><?php the_time('d \d\e F \d\e Y ') ?></h3>
+	         </div>
+				<?php endwhile; ?>
+				<div class="content-post">
+					<?php
+					 while ( have_posts() ) : the_post();
+							 get_template_part( 'content', 'single' );
+					 endwhile;
+				 ?>
+				</div>
       </article>
+
       <aside class="sidebar">
         <h3>Procurando por algo?</h3>
-        <input type="text">
-        <input type="submit" value="Buscar">
-        <div class="sub-items">
-          <h3>Categorias:</h3>
-          <p>Category 1</p>
-          <p>Category 2</p>
-          <p>Category 3</p>
-          <p>Category 4</p>
-        </div>
-
-        <div class="sub-items">
-          <h3>Postagens recentes:</h3>
-          <p>Artigo teste 1</p>
-          <p>Artigo teste 2</p>
-          <p>Artigo teste 3</p>
-        </div>
-
-
+				<?php
+					dynamic_sidebar('single_sidebar');
+			 	?>
       </aside>
     </div>
   </div>
@@ -60,4 +49,4 @@
 
 
 
-<?php include 'footer.php'; ?>
+<?php get_footer(); ?>

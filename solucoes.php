@@ -9,11 +9,12 @@ get_header();
 ?>
 
 <div class="above-parallax">
-    <div class="myName page-title">
-        <div class="inner">
-          <h1>Soluções</h1>
-        </div>
-    </div>
+	 <div class="myName page-title">
+		<div class="inner">
+			<h1>Soluções</h1>
+		</div>
+ 	</div>
+	<div class="overlay"></div>
 </div>
 <section class="services-list">
   <div class="container">
