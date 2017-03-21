@@ -7,6 +7,7 @@
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.9.8",
     "gulp": "*",
+	 "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "*",
     "gulp-concat": "*",
     "gulp-concat-css": "^2.3.0",
