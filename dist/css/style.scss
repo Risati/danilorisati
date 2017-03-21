@@ -1,11 +1,10 @@
 @import "bootstrap";
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800';
 @import 'https://fonts.googleapis.com/css?family=Oswald:400,700';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 // 300 - LIGHT | 400 - REGULAR | 600 - SEMI BOLD | BOLD - 700 | 800 - EXTRA BOLD
 
 
-$font-pattern: 'Montserrat', 'Open Sans', sans-serif;
+$font-pattern: 'Open Sans', sans-serif;
 $font-titles: 'Oswald', sans-serif;
 $color-black: #2C3E50;
 $color-blue: #3498DB;
@@ -182,8 +181,9 @@ header {
   width: 100%;
   min-height: 100%;
   overflow-y: hidden;
-  background: url('../images/workspace1.jpg');
+  background: url('../images/digital-people.jpg');
   background-attachment: fixed;
+  background-position: center top;
   @include page_title();
   .overlay{
     background: url('../images/dot-overlay.png');
