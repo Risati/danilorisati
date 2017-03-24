@@ -97,7 +97,7 @@ get_header();
               </div>
               <div class="phone-gap">
                   <div class="phone-service">
-                      <img src="<?php bloginfo('template_url'); ?>/assets/images/phone-service.png">
+                      <img src="<?php bloginfo('template_url'); ?>/assets/images/phone-gap.png">
                   </div>
               </div>
               <div class="service-item">

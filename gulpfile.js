@@ -83,7 +83,8 @@ gulp.task('server', function() {
       proxy: 'localhost/danilorisati',
 			port: 8080,
 			open: true,
-			notify: false
+			notify: false,
+			browser: 'Firefox'
     });
 
 		/* CHANGE TO gulp.watch('*\/**')*/

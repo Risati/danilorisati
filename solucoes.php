@@ -19,13 +19,13 @@ get_header();
 <section class="services-list">
   <div class="container">
     <div class="row">
-      <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+      <h2>Em busca de alguma solução?</h2>
       <div class="feature-box">
         <div class="icon">
             <i class="fa fa-code"></i>
         </div>
         <div class="text">
-            <h3>Service title</h3>
+            <h3>Sites institucionais</h3>
             <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
         </div>
       </div>
@@ -34,7 +34,7 @@ get_header();
             <i class="fa fa-code"></i>
         </div>
         <div class="text">
-            <h3>Service title</h3>
+            <h3>Lojas virtuais</h3>
             <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
         </div>
       </div>
@@ -43,7 +43,7 @@ get_header();
             <i class="fa fa-code"></i>
         </div>
         <div class="text">
-            <h3>Service title</h3>
+            <h3>Hotsites / Landing pages</h3>
             <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
         </div>
       </div>
@@ -52,7 +52,7 @@ get_header();
             <i class="fa fa-code"></i>
         </div>
         <div class="text">
-            <h3>Service title</h3>
+            <h3>Design responsivo</h3>
             <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
         </div>
       </div>
@@ -61,16 +61,34 @@ get_header();
             <i class="fa fa-code"></i>
         </div>
         <div class="text">
-            <h3>Service title</h3>
+            <h3>Conversão de layouts</h3>
             <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
         </div>
       </div>
+		<div class="feature-box">
+		  <div class="icon">
+				<i class="fa fa-code"></i>
+		  </div>
+		  <div class="text">
+				<h3>Blogs</h3>
+				<p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+		  </div>
+		</div>
       <div class="feature-box">
         <div class="icon">
             <i class="fa fa-code"></i>
         </div>
         <div class="text">
-            <h3>Service title</h3>
+            <h3>Wordpress</h3>
+            <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        </div>
+      </div>
+		<div class="feature-box">
+        <div class="icon">
+            <i class="fa fa-code"></i>
+        </div>
+        <div class="text">
+            <h3>SEO</h3>
             <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
         </div>
       </div>

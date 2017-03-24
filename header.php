@@ -44,7 +44,7 @@
                 <li><a href="<?php bloginfo('url'); ?>">Home</a></li>
                 <li><a href="./sobre">Sobre</a></li>
                 <li><a href="./portfolio">Portfolio</a></li>
-                <li><a class="logo" href="<?php bloginfo('url'); ?>"><img id="logo-navbar-middle" src="<?php bloginfo('template_url'); ?>/assets/images/logo_simbolo.png"></a></li>
+                <li><a class="logo" href="<?php bloginfo('url'); ?>"><img id="logo-navbar-middle" src="<?php bloginfo('template_url'); ?>/assets/images/teste.svg"></a></li>
                 <li><a href="./solucoes">Soluções</a></li>
                 <li><a href="./contato">Contato</a></li>
                 <li><a href="./artigos">Artigos</a></li>
