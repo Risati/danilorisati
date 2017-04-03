@@ -41,7 +41,8 @@ get_header();
 						'posts_per_page'=>6,
 						'post_status'=>"publish",
 						'post_type'=>"projetos",
-						'orderby'=>"post_date"
+						'orderby'=>"post_date",
+						'order' => 'asc'
 				);
 				query_posts( $args );
 				while ( have_posts() ) : the_post(); ?>
@@ -61,7 +62,7 @@ get_header();
 					</article>
 				<?php endwhile; ?>
          <div class="btnMore">
-            <a href="#"><button class="button-type" data-text="Ver mais"><span>Ver mais</span></button></a>
+            <a href="./portfolio"><button class="button-type" data-text="Ver mais"><span>Ver mais</span></button></a>
          </div>
       </div>
     </div>
@@ -79,7 +80,7 @@ get_header();
                           <i class="fa fa-code"></i>
                       </div>
                       <div class="text">
-                          <h3>Service title</h3>
+                          <h3>Sites institucionais</h3>
                           <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
                       </div>
                   </div>
@@ -90,7 +91,7 @@ get_header();
                           <i class="fa fa-code"></i>
                       </div>
                       <div class="text">
-                          <h3>Service title</h3>
+                          <h3>Lojas virtuais</h3>
                           <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
                       </div>
                   </div>
@@ -106,7 +107,7 @@ get_header();
                           <i class="fa fa-code"></i>
                       </div>
                       <div class="text">
-                          <h3>Service title</h3>
+                          <h3>Hotsites / Landing pages</h3>
                           <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
                       </div>
                   </div>
@@ -117,12 +118,12 @@ get_header();
                           <i class="fa fa-code"></i>
                       </div>
                       <div class="text">
-                          <h3>Service title</h3>
+                          <h3>Design responsivo</h3>
                           <p>doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
                       </div>
                   </div>
               </div>
-              <a href="#"><button class="button-type" data-text="Ver mais"><span>Ver mais</span></button></a>
+              <a href="./solucoes"><button class="button-type" data-text="Ver mais"><span>Ver mais</span></button></a>
           </div>
       </div>
   </section>

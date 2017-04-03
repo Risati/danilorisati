@@ -28,7 +28,7 @@
 <!--<div id="preloader">
     <div id="status">&nbsp;</div>
 </div>-->
-<a class="toTop"><i class="fa fa-angle-up"></i></a>
+<a class="toTop"></a>
 <nav id="navbar-primary" class="navbar navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">

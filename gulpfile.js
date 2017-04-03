@@ -84,7 +84,7 @@ gulp.task('server', function() {
 			port: 8080,
 			open: true,
 			notify: false,
-			browser: 'Firefox'
+			//browser: 'Firefox'
     });
 
 		/* CHANGE TO gulp.watch('*\/**')*/

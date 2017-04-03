@@ -6,8 +6,10 @@
 
 $font-pattern: 'Open Sans', sans-serif;
 $font-titles: 'Oswald', sans-serif;
-$color-black: #2C3E50;
+// $color-black: #2C3E50;
+$color-black: #303030;
 $color-blue: #3498DB;
+
 $color-soft-grey: #ECF0F1;
 
 @mixin page_title(){
@@ -82,15 +84,14 @@ body::-webkit-scrollbar-thumb{
   margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
 .animateMenu{
-  background: #fff !important;
+  background: $color-blue !important;
   transition: all 0.5s ease 0s;
   .navbar-nav{
     > li{
       > a{
         transition: all 0.5s ease 0s;
-        color: $color-black !important;
         padding-top: 15px !important;
-      }
+     }
     }
   }
 }
@@ -112,8 +113,8 @@ body::-webkit-scrollbar-thumb{
       }
       > a {
         font-weight: 600;
-        color: #fff;
         font-family: $font-pattern;
+        color: #fff;
         padding-top: 60px;
         padding-left: 0;
         padding-right: 0;
@@ -469,14 +470,54 @@ header {
 		color: $color-black;
 		margin: 30px 0;
     }
-    hr{
-      width: 66.66667%;
-      float: left;
-    }
   }
   .service-item{
     @extend .col-md-4;
-  }
+	 .feature-box{
+      margin: 30px 0 0;
+      &:hover{
+        h3{
+          color: $color-blue;
+        }
+        .icon{
+          border-color: $color-blue;
+			 color: $color-blue;
+        }
+      }
+      .icon{
+        width: 75px;
+        height: 75px;
+        border-radius: 50px;
+        overflow: hidden;
+        border: 1px solid $color-black;
+        line-height: 75px;
+        text-align: center;
+        color: $color-black;
+        font-size: 30px;
+        margin-right: 25px;
+        float: left;
+        transition: all .3s ease 0s;
+        }
+      }
+    	.text{
+	      width: 70%;
+	      float: right;
+	      color: #fff;
+	      h3{
+	        font-family: $font-pattern;
+			  color: $color-black;
+	        font-weight: 600;
+	        margin: 0 0 5px 0;
+	        transition: all .5s ease 0s;
+	      }
+	      p{
+	        font-family: $font-pattern;
+			  color: $color-black;
+	        font-weight: 300;
+	        text-align: left;
+	      }
+    	}
+  	}
   .phone-gap{
     @extend .col-md-4;
     float: right;
@@ -494,42 +535,7 @@ header {
     }
   }
 
-  .feature-box{
-    float: left;
-    margin-bottom: 30px;
-    .icon{
-      width: 75px;
-      height: 75px;
-      border-radius: 50px;
-      overflow: hidden;
-      border: 1px solid #eee;
-      line-height: 75px;
-      text-align: center;
-      color: $color-blue;
-      font-size: 30px;
-      margin-right: 25px;
-      float: left;
-      transition: all .5s ease 0s;
-      &:hover{
-        border-color: $color-blue;
-      }
-    }
-    .text{
-      width: 70%;
-      float: right;
-      color: $color-black;
-      h3{
-        font-family: $font-pattern;
-        font-weight: 600;
-        margin: 0 0 5px 0;
-      }
-      p{
-        font-family: $font-pattern;
-        font-weight: 300;
-        text-align: justify;
-      }
-    }
-  }
+
   .button-type{
     float: right;
     right: 15px;
@@ -554,21 +560,21 @@ header {
     .facebook{
       > i{
         &:hover{
-          color: #3B5997;
+          color: $color-blue;
         }
       }
     }
     .linkedin{
       >i{
         &:hover{
-          color: #1985BC;
+          color: $color-blue;
         }
       }
     }
     .github{
       > i{
         &:hover{
-          color: #333;
+          color: $color-blue;
         }
       }
     }
@@ -818,9 +824,12 @@ header {
   }
 }
 .toTop {
+
+
+
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 5px;
+  right: 5px;
   color: #fff;
   font-size: 35px;
   background: $color-blue;
@@ -829,8 +838,12 @@ header {
   text-align: center;
   z-index: 9999;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   display: none;
+  &:before{
+	  content: '\f106';
+	  font-family: 'FontAwesome'
+  }
   &:hover{
     color: #fff;
   }
@@ -917,24 +930,31 @@ header {
     float: right;
     margin: 15px;
   }
-  .extra-info{
-    @extend .col-md-4;
-    @extend .col-sm-4;
-  }
-  .extra-info{
-    text-align: center;
-    .features-icon{
-      position: relative;
-      margin-top: 10px;
-      i {
-        color: $color-black;
+
+   .extra-info{
+      @extend .col-md-4;
+      @extend .col-sm-4;
+      text-align: center;
+      .features-icon{
+         position: relative;
+         margin-top: 10px;
+         i {
+            color: $color-black;
+         }
       }
-    }
-    h3{
-      margin: 10px 0;
-      font-size: 16px;
-    }
-  }
+      .features-text{
+         a{
+            text-decoration: none;
+         }
+         h3{
+            font-family: $font-pattern;
+            font-weight: 600;
+            color: $color-black;
+            margin: 10px 0;
+            font-size: 16px;
+         }
+      }
+   }
 }
 .services-list{
   padding: 50px 0;
@@ -971,7 +991,7 @@ header {
       font-size: 30px;
       margin-right: 25px;
       float: left;
-      transition: all .5s ease 0s;
+      transition: all .3s ease 0s;
       }
     }
   .text{
