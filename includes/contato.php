@@ -1,32 +1,23 @@
-<?php
-/*
-Template Name: Contato
-*/
-get_header();
-?>
-<section class="contact-home navigation" data-speed="15">
-	<div class="wrap">
-		<i class="fa fa-paper-plane"></i>
-		<h1>Contato</h1>
-	</div>
-</section>
-
 <div class="contact">
 	<div class="container">
 		<div class="row">
 			 <p>Aqui é Body Builder Ipsum PORRA! Vo derrubar tudo essas árvore do parque ibirapuera. Boraaa, Hora do Show Porra</p>
 			 <div class="form">
 				  <div class="form-input">
-						<input type="text" placeholder="&#xf007; Nome">
+						<input id="nome" type="text" placeholder="Nome">
+						<label for="nome">nome</label>
 				  </div>
 				  <div class="form-input">
-						<input type="email" placeholder="&#xf1d8; E-mail">
+						<input id="email" type="email" placeholder="E-mail">
+						<label for="email">e-mail</label>
 				  </div>
 				  <div class="form-input">
-						<input type="tel" placeholder="&#xf095; Telefone">
+						<input id="tel"type="tel" placeholder="Telefone">
+						<label for="tel">telefone</label>
 				  </div>
 				  <div class="form-textarea">
-						<textarea placeholder="&#xf1d7; Mensagem"></textarea>
+						<textarea placeholder="Mensagem"></textarea>
+						<label for="tel">Mensagem</label>
 				  </div>
 				  <a href="#"><button type="submit" class="button-type" data-text="Enviar"><span>Enviar</span></button></a>
 			 </div>
@@ -48,5 +39,3 @@ get_header();
 		</div>
 	</div>
 </div>
-
-<?php get_footer(); ?>

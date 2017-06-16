@@ -2,7 +2,7 @@
   "name": "danilorisati",
   "version": "1.0.0",
   "description": "Personal website",
-  "author": "Danilo Risati <danilo@danilorisati.com.br>",
+  "author": "Danilo Risati <risati@agenciainclui.com.br>",
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.9.8",
