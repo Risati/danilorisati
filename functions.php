@@ -20,7 +20,9 @@ function danilo_scripts() {
 
 
    //Scripts
+   wp_enqueue_script( 'danilo-jquery', get_template_directory_uri() . '/assets/js/jquery-3.2.1.min.js', array(), '', true );
    wp_enqueue_script( 'danilo-js', get_template_directory_uri() . '/assets/js/script.min.js', array(), '', true );
+
 }
 
 add_action('wp_enqueue_scripts', 'danilo_scripts');
