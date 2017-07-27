@@ -37,17 +37,17 @@ function modalCloseActive() {
   });
 }
 
-function sliderPorfolio() {
+function sliderPortfolio() {
     $('.projects-container').slick({
         dots: true,
         infinite: true,
         autoplay: false,
         arrows: true,
-        speed:500,
+        speed:250,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: false,
-		  draggable: false,
+		  draggable: true,
 		  nextArrow: '<i class="fa fa-angle-right"></i>',
 			prevArrow: '<i class="fa fa-angle-left"></i>',
         responsive: [
@@ -88,11 +88,31 @@ function portfolioFilter(){
 	$('#portfolio-list').mixItUp();
 }
 
+function activeNavbar(){
+	$('.navbar-toggle').click(function () {
+		$('.navbar-toggle, main').toggleClass('open');
+		$('.navbar-nav').toggleClass('active-navbar');
+	});
+}
+
+function parallaxImage(){
+	$('.parallax-image').each(function(){
+		var $objImage = $(this);
+		$(window).scroll(function(){
+			var scrolled = $(window).scrollTop();
+			$('.parallax-image').css('top', (100-(scrolled * $objImage.data('speed'))) + 'px');
+		});
+	});
+
+}
+
 
 
 $(function() {
+	activeNavbar();
 	parallax();
+	parallaxImage();
 	opacityHeaderScroll();
 	scrollDown();
-	sliderPorfolio();
+	//sliderPortfolio();
 });

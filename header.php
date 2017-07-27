@@ -7,6 +7,7 @@
 	<base href="/">
 	<meta name="theme-color" content="#0090C7">
 	<meta name="msapplication-navbutton-color" content="#0090C7">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
 
 	<title>
 			<?php if ( is_search() ) {
@@ -45,7 +46,7 @@
    	        <div class="collapse navbar-collapse" id="navbar-danilo">
    				  <!-- <a class="logo" href="<?php bloginfo('url'); ?>"><img id="logo-navbar-middle" src="<?php bloginfo('template_url'); ?>/assets/images/logo_simbolo.svg"></a> -->
    	            <ul class="nav navbar-nav">
-   	                <li><a href="<?php bloginfo('url'); ?>">Home</a></li>
+   	                <!-- <li><a href="<?php bloginfo('url'); ?>">Home</a></li> -->
    	                <li><a href="./sobre">Sobre</a></li>
    	                <li><a href="./portfolio">Portfolio</a></li>
    	                <li><a href="./contato">Contato</a></li>

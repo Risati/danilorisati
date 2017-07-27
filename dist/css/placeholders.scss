@@ -32,11 +32,28 @@
 }
 %form-input{
 	width: 100%;
-	padding: 0;
+	padding: 15px;
 	border: 0;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid $color-light-black;
 	outline: 0;
-	background-color: $color-black;
+	background-color: transparent;
 	color: #fff;
 	font-weight: $font-light;
+	padding-bottom: 10px;
+	background-color: $color-light-black;
+}
+
+%place-holder{
+	&::-webkit-input-placeholder {
+		visibility: hidden;
+	}
+	&:-moz-placeholder {
+		visibility: hidden;
+	}
+	&::-moz-placeholder {
+		visibility: hidden;
+	}
+	&:-ms-input-placeholder {
+		visibility: hidden;
+	}
 }
