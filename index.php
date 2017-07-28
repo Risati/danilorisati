@@ -71,7 +71,7 @@ get_header();
 
 
 			  <div class="wrap">
-			  		<a class="read-more" href="#"><span>Veja todos os projetos</span></a>
+			  		<a class="button-type" href="#"><span>Veja todos os projetos</span></a>
 			  </div>
 			</div>
 		</div>
@@ -150,21 +150,25 @@ get_header();
 						<div class="col">
 							<input type="text" id="name">
 							<label for="name">Nome</label>
+							<span></span>
 						</div>
 						<div class="col">
 							<input type="email" id="email">
 							<label for="email">E-mail</label>
+							<span></span>
 						</div>
 						<div class="col">
 							<input type="text" id="subject">
 							<label for="subject">Assunto</label>
+							<span></span>
 						</div>
 						<div class="col">
 							<textarea id="message"></textarea>
 							<label for="message">Mensagem</label>
+							<span></span>
 						</div>
 						<div class="col">
-							<button type="submit" name="button">Enviar</button>
+							<button class="button-type" type="submit" name="button"><span>Enviar</span></button>
 						</div>
 					</div>
 				</div>

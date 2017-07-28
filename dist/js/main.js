@@ -103,10 +103,22 @@ function parallaxImage(){
 			$('.parallax-image').css('top', (100-(scrolled * $objImage.data('speed'))) + 'px');
 		});
 	});
-
 }
 
+function formValidate(){
+	var input = $('.form input, .form textarea');
+	input.blur(function(){
+		if($(this).val()){
+			$(this).addClass('form-filled');
+		}else{
+			$(this).removeClass('form-filled');
+		}
+	});
 
+	$('.form button').click(function(){
+		$('.input-submit').trigger('click');
+	});
+}
 
 $(function() {
 	activeNavbar();
@@ -114,5 +126,6 @@ $(function() {
 	parallaxImage();
 	opacityHeaderScroll();
 	scrollDown();
+	formValidate();
 	//sliderPortfolio();
 });
