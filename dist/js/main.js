@@ -20,11 +20,12 @@ function opacityHeaderScroll(){
 }
 
 function scrollDown() {
-	$('.scroll-down').bind('click', function(event) {
+	var navigate = $('.scroll-down, .navbar-nav a, #side-nav a');
+	$(navigate).bind('click', function(event) {
        var $anchor = $(this);
        $('html, body').stop().animate({
-           scrollTop: $($anchor.attr('href')).offset().top - 15
-       }, 800, 'jswing');
+           scrollTop: $($anchor.attr('href')).offset().top - 30
+       }, 1200, 'easeInOutExpo');
        event.preventDefault();
    });
 }
@@ -95,6 +96,13 @@ function activeNavbar(){
 	});
 }
 
+function navigateNavbar(){
+	var anchor = $('.navbar-nav a');
+	anchor.click(function(){
+		$('.navbar-toggle').trigger('click');
+	});
+}
+
 function parallaxImage(){
 	$('.parallax-image').each(function(){
 		var $objImage = $(this);
@@ -127,5 +135,6 @@ $(function() {
 	opacityHeaderScroll();
 	scrollDown();
 	formValidate();
+	navigateNavbar();
 	//sliderPortfolio();
 });

@@ -5,8 +5,9 @@ Template Name: Home page
 */
 get_header();
 ?>
+
 <main>
-	<section class="intro parallax" data-speed="7">
+	<section id="home" class="intro parallax" data-speed="7">
 		<div class="name">
 			<h1>Danilo <span>Risati</span></h1>
 			<h2>Front end & web designer</h2>
@@ -66,9 +67,6 @@ get_header();
 
 					  <?php endwhile; ?>
 			  </div>
-
-
-
 
 			  <div class="wrap">
 			  		<a class="button-type" href="#"><span>Veja todos os projetos</span></a>

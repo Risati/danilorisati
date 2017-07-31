@@ -32,9 +32,7 @@ html, body{
 	height: 100%;
 	font-family: $font-roboto;
 	background-color: $color-black;
-	&.open{
-		overflow: hidden;
-	}
+	position: relative;
 }
 main{
 	transition: all .5s ease;
@@ -103,6 +101,7 @@ main{
 		}
 		&.open{
 			.icon-bar{
+				background-color: $color-red;
 				&:nth-child(2){
 					transform: rotate(45deg);
 					transform-origin: 5% 10%;
@@ -123,42 +122,36 @@ main{
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		position: fixed;
 		opacity: 1;
-		visibility: hidden;
-		width: 100%;
+		width: 400px;
 		height: 100%;
-		position: absolute;
-		left: 0;
+		right: -100%;
 		top: 0;
-		background: rgba($color-red, .3);
-		transition: all .5s ease;
+		background: $color-light-black;
+		transition: all .4s ease-in-out;
+		text-align: left;
 		li{
 			display: block;
 			clear: both;
-			margin-bottom: 50px;
-			opacity: 0;
-			transition: .9s ease;
+			margin-bottom: 15px;
 			&:last-child{
 				margin-bottom: 0;
 			}
 			a{
-				color: #fff;
-				font-size: 70px;
-				font-weight: $font-bold;
+				font-family: $font-zilla;
+				font-weight: $font-medium;
+				font-size: 30px;
 				letter-spacing: 1px;
-				text-transform: uppercase;
+				text-transform: lowercase;
+				color: #fff;
 				&:hover{
 					background-color: transparent;
 				}
 			}
 		}
 		&.active-navbar{
-			visibility: visible;
-			position: fixed;
-			transform: translateX(0);
-			li{
-				opacity: 1;
-			}
+			right: 0;
 		}
 	}
 }
@@ -344,6 +337,7 @@ main{
 			position: absolute;
 			bottom: 0;
 			width: 100%;
+			height: 2px;
 			&:before{
 				content: '';
 				position: absolute;
@@ -375,6 +369,7 @@ main{
 			resize: none;
 			height: 150px;
 			line-height: 1.6;
+			margin-bottom: -5px;
 			~ label{
 				height: auto;
 				top: 20px;
@@ -385,7 +380,7 @@ main{
 					transform: translate(-15px, -43px);
 				}
 				~ span{
-					bottom: 5px;
+					bottom: 0px;
 					&:before{
 						width: 100%;
 						background-color: $color-red;
