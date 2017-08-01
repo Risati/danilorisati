@@ -27,7 +27,7 @@
 }
 %wrap-container{
 	width: 100%;
-	max-width: 1100px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 %form-input{
@@ -53,4 +53,10 @@
 	&:-ms-input-placeholder {
 		visibility: hidden;
 	}
+}
+
+%spacing-sections{
+	position: relative;
+	padding: 50px 0;
+	margin: 100px 0;
 }

@@ -8,11 +8,17 @@ get_header();
 
 <main>
 	<section id="home" class="intro parallax" data-speed="7">
-		<div class="name">
-			<h1>Danilo <span>Risati</span></h1>
-			<h2>Front end & web designer</h2>
+		<div class="wrap">
+			<div class="name">
+				<h1>Danilo <span>Risati</span></h1>
+				<h2>Front end & web designer</h2>
+			</div>
 		</div>
-			<a class="scroll-down" href="#about"></a>
+		<a class="scroll-down" href="#about">
+			<div class="mouse">
+				<div class="scroll"></div>
+			</div>
+		</a>
 	</section>
 
 	<section id="about" class="about" data-text="Sobre">
