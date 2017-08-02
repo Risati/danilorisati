@@ -27,7 +27,9 @@ function danilo_scripts() {
 
 add_action('wp_enqueue_scripts', 'danilo_scripts');
 
-//require_once('wp_bootstrap_navwalker.php');
+require_once('wp_bootstrap_navwalker.php');
+
+
 
 register_nav_menus( array(
    'primary' => __( 'Primary menu', 'danilo' ),

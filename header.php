@@ -41,16 +41,20 @@
 						</div>
    	        </div>
 
-   	        <div class="collapse navbar-collapse" id="navbar-danilo">
-   				  <!-- <a class="logo" href="<?php bloginfo('url'); ?>"><img id="logo-navbar-middle" src="<?php bloginfo('template_url'); ?>/assets/images/logo_simbolo.svg"></a> -->
-   	            <ul class="nav navbar-nav">
-   	                <!-- <li><a href="<?php bloginfo('url'); ?>">Home</a></li> -->
-   	                <li><a href="#home">Início</a></li>
-   	                <li><a href="#about">Sobre</a></li>
-   	                <li><a href="#portfolio">Portfólio</a></li>
-   	                <li><a href="#contact">Contato</a></li>
-   	            </ul>
-   	        </div>
+
+				  <?php
+					  wp_nav_menu( array(
+						'menu'              => 'primary',
+						'theme_location'    => 'primary',
+						'depth'             => 2,
+						'container'         => 'div',
+						'container_class'   => 'collapse navbar-collapse',
+						  'container_id'      => 'navbar-danilo',
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'walker'            => new wp_bootstrap_navwalker())
+				  );
+			  ?>
    	    </div>
 	    </div>
 	</nav>

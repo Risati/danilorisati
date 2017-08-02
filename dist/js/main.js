@@ -94,6 +94,7 @@ function activeNavbar(){
 		$('.navbar-toggle, main').toggleClass('open');
 		$('.navbar-nav').toggleClass('active-navbar');
 	});
+	$("a").removeAttr("title");
 }
 
 function navigateNavbar(){
