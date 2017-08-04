@@ -12,10 +12,10 @@ function parallax() {
 }
 
 function opacityHeaderScroll(){
-	var name = $('.name');
+	var items = $('.name, .logo');
 	$(window).scroll(function(){
 		var percentTop = $(window).scrollTop() / 500;
-		 name.css('opacity', 1 - percentTop);
+		 items.css('opacity', 1 - percentTop);
 	});
 }
 
@@ -39,44 +39,30 @@ function modalCloseActive() {
 }
 
 function sliderPortfolio() {
-    $('.projects-container').slick({
+	var items = $('article .image, article .description');
+	$('#portfolio-list').on('init', function(event, slick) {
+		items.addClass('in');
+	});
+    $('#portfolio-list').slick({
         dots: true,
         infinite: true,
         autoplay: false,
         arrows: true,
-        speed:250,
+        speed: 600,
         slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: false,
 		  draggable: true,
+		  fade: true,
+		  cssEase: 'ease-out',
+		  lazyLoad: 'ondemand',
 		  nextArrow: '<i class="fa fa-angle-right"></i>',
-			prevArrow: '<i class="fa fa-angle-left"></i>',
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+		  prevArrow: '<i class="fa fa-angle-left"></i>'
+    }).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		 	items.addClass('out').removeClass('in');
+	 }).on('afterChange', function(event, slick, currentSlide, nextSlide){
+			items.addClass('in').removeClass('out');
+	 });
 }
 
 function aos(){
@@ -137,5 +123,5 @@ $(function() {
 	scrollDown();
 	formValidate();
 	navigateNavbar();
-	//sliderPortfolio();
+	sliderPortfolio();
 });

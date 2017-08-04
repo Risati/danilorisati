@@ -50,7 +50,7 @@ get_header();
 					</div>
 				</div>
 
-			  <div id="portfolio-list" class="projects-container">
+			  <div id="portfolio-list" class="container-fluid projects-container">
 					  <?php $args=array(
 							  'paged' => $paged,
 							  'numberposts'=>6,
@@ -65,9 +65,14 @@ get_header();
 						  <div class="item">
 							  <article <?php post_class('mix portfolio-item') ?>>
 	   						  <?php if (has_post_thumbnail( $post->ID )):
-	   								  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'tamanho-blogn' );
+	   								  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'size-image' );
 	   						  endif; ?>
-
+								  <div class="description">
+								  		<h3><?php the_title(); ?></h3>
+								  </div>
+								  <div class="image">
+								  		<img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+								  </div>
 	   					  </article>
 						  </div>
 

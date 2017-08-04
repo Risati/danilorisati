@@ -675,7 +675,6 @@ section{
 		@extend %wrap-container;
 		perspective: 600px;
 	}
-
   .scrollimation{
     .portfolio-thumb{
       transform:translateY(100px);
@@ -712,12 +711,20 @@ section{
 		transform: translateY(-50%);
 		color: #fff;
 		font-size: 60px;
+		z-index: 99;
+		transition: .2s ease;
 		cursor: pointer;
 		&.fa-angle-left{
-			left: -50px;
+			right: 100px;
+			top: 0;
 		}
 		&.fa-angle-right{
-			right: -50px;
+			right: 50px;
+			top: 0;
+		}
+		&:hover,
+		&:focus{
+			color: $color-red;
 		}
 	}
 	.slick-dots{
@@ -749,26 +756,6 @@ section{
 			outline: 0;
 		}
 	}
-	.item{
-		&.slick-active{
-			article{
-				.description{
-					-webkit-animation:fadeInRight 1s both 1s;
-			 		animation:fadeInRight 1s both 1s;
-					h3{
-
-					}
-				}
-				.image{
-					-webkit-animation:fadeInLeft 1s both 1.5s;
-			 		animation:fadeInLeft 1s both 1.5s;
-					img{
-
-					}
-				}
-			}
-		}
-	}
 	article{
 		display: flex;
 		flex-flow: row wrap;
@@ -777,23 +764,38 @@ section{
 			outline: 0 !important;
 		}
 		.description{
+			position: relative;
 			width: 40%;
 			h3{
 				margin: 0 0 15px;
 				color: #fff;
 				font-weight: $font-light;
 				font-size: 35px;
-
+			}
+			&.in{
+				left: 0;
+				transition: .6s ease;
+			}
+			&.out{
+				left: -100%;
+				transition: .6s ease;
 			}
 		}
 		.image{
+			position: relative;
 			width: 60%;
 			outline: none;
 			img{
 				display: block;
 				max-width: 100%;
-
-
+			}
+			&.in{
+				right: 0;
+				transition: .6s ease;
+			}
+			&.out{
+				right: -100%;
+				transition: .6s ease;
 			}
 		}
 	}
