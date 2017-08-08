@@ -6,7 +6,6 @@ function parallax() {
 			  var yPos = -($(window).scrollTop() - offset.top) / $obj.data('speed');
 			  var bgpos = '50% ' + (yPos * 2) + 'px';
 			  $obj.css('background-position', bgpos);
-
 		 });
 	});
 }
@@ -20,7 +19,7 @@ function opacityHeaderScroll(){
 }
 
 function scrollDown() {
-	var navigate = $('.scroll-down, .navbar-nav a, #side-nav a');
+	var navigate = $('.scroll-down, .navbar-nav a');
 	$(navigate).bind('click', function(event) {
        var $anchor = $(this);
        $('html, body').stop().animate({
@@ -29,8 +28,6 @@ function scrollDown() {
        event.preventDefault();
    });
 }
-
-
 
 function modalCloseActive() {
   $('.close-modal').hover(function() {

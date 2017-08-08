@@ -107,11 +107,11 @@ flush_rewrite_rules();
 
 
 register_taxonomy(
-"categoria",
+"categorias",
 		"projetos",
 		array(
-			"label" => "Categoria",
-					"singular_label" => "categoria",
+			"label" => "Categorias",
+					"singular_label" => "categorias",
 					"rewrite" => true,
 					"hierarchical" => true
 )

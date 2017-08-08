@@ -58,7 +58,7 @@ get_header();
 							  'post_status'=>"publish",
 							  'post_type'=>"projetos",
 							  'orderby'=>"post_date",
-							  'order' => 'asc'
+							  'order' => 'desc'
 					  );
 					  query_posts( $args );
 					  while ( have_posts() ) : the_post(); ?>
@@ -68,10 +68,18 @@ get_header();
 	   								  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'size-image' );
 	   						  endif; ?>
 								  <div class="description">
-								  		<h3><?php the_title(); ?></h3>
+									  <a href="#portfolio-modal-<?php the_ID(); ?>" data-toggle="modal">
+										  <h3><?php the_title(); ?></h3>
+									  </a>
+
+									  <div class="list-categories">
+										  <?php echo get_the_term_list($post->ID, 'categorias', '', '') ?>
+									  </div>
 								  </div>
 								  <div class="image">
-								  		<img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+								  		<a href="#portfolio-modal-<?php the_ID(); ?>" data-toggle="modal">
+											<img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+										</a>
 								  </div>
 	   					  </article>
 						  </div>
